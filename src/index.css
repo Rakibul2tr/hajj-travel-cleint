@@ -11,3 +11,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar-nav a{
+  padding: 4px 6px;
+  text-decoration: none;
+  color:#444;
+  border-radius: 50px;
+  margin: 2px;
+  font-weight: 400;
+
+  
+}
+.navbar-nav a:hover{
+  color: azure;
+  background: rgb(194, 27, 27);
+}
+button.navbar-toggler.collapsed {
+  background: rgb(221, 231, 176);
+}
+button.navbar-toggler.collapsed span {
+  color: black !important;
+}
+.dropdown-toggle:hover.dropdown-menu{
+  display: block !important;
+}
+/*====== carousel section =======*/
+.carouselcapton {
+  top: 16%;
+  width: 600px;
+  left: 2% !important;
+  /* background: #444; */
+  /* opacity: 0.4; */
+  height: 300px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.image{
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+/* .card {
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 250px;
+} */
+
+.adddata form,.userinform form{
+margin: 0 auto;
+}
+.adddata form input,.userinform form input{
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+}
+/* packege data */
+.packegcard{
+ max-height: 5000px;
+  min-height: 450px;
+}
+.cardbtn a{
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 600;
+}
+/* login */
+.loginbg{
+  margin-top: 80px;
+  background-image: url('./media/slider/6512.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  
+}
+/* fotter */
+.foterbg{
+  background-color:rgb(44, 40, 40);
+}
+.fabouutus{
+  color: aliceblue;
+}
