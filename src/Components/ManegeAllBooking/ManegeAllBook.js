@@ -58,10 +58,10 @@ const ManegeAllBook = () => {
                         <span className="border me-2 p-1">{singleitem?.email}</span>
                         <span className="border me-2 p-1">{singleitem?.username}</span>
                         <span className="border me-2 p-1">{singleitem?.status}</span>
-                        <button onClick={()=>updatebtn(singleitem._id)} className="btn btn-danger m-2 p-0">
-                            <Link to={`/manegeall/${singleitem._id}`}>Update</Link>
+                        <button onClick={()=>updatebtn(singleitem._id)} className="btn btn-danger m-2 p-1">
+                            <Link to={`/manegeall/${singleitem._id}`} className="text-white">Update</Link>
                         </button>
-                        <button onClick={()=>deletebtn(singleitem._id)} className="btn btn-danger m-2 p-0">X cancel</button>
+                        <button onClick={()=>deletebtn(singleitem._id)} className="btn btn-danger m-2 p-1">X cancel</button>
                       </li>)
                   }
                </ol>

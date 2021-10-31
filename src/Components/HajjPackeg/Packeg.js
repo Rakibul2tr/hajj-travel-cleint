@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 import UseContex from '../../Contextapi/UseContext';
 
 const Packeg = () => {
- const {packeges}=UseContex();
+ const {packeges,addpackeg}=UseContex();
  const homepackegdata= packeges.slice(0,6);
+ const addtocardhendl=(packeg)=>{
+    addpackeg(packeg);
+}
     return (
         <div className="container">
             <div className="row mt-4">
@@ -28,6 +31,10 @@ const Packeg = () => {
                      <button className="btn btn-warning cardbtn me-2">
                      <Link to={`/packeg/${packeg._id}`}>Details and booking</Link>
                      </button>
+                     <button onClick={()=>addtocardhendl(packeg)} className="btn btn-warning cardbtn">
+                            <i className="fas fa-shopping-cart"></i>
+                            Add to Cart
+                    </button>
                    </div>
                  </div>
                  </div>)
@@ -36,6 +43,7 @@ const Packeg = () => {
              <button className="btn btn-warning cardbtn ms-auto w-25 mt-2">
               <Link to="/allpackeg">See All Packege</Link>
             </button>
+            
          </div>
         </div>
     );
@@ -43,20 +51,3 @@ const Packeg = () => {
 
 export default Packeg;
 
-
-// 
-// 
-// 
-// https://i.ibb.co/BjHR6BZ/turkey.jpg
-// {/* <Navbar bg="warning" expand="lg" className="rounded">
-//                 <Container>
-//                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//                     <Navbar.Collapse id="basic-navbar-nav">
-//                     <Nav className="mx-auto">
-//                         <Nav.Link as={Link}to="/umrah" >UMRAH</Nav.Link>
-//                         <Nav.Link as={Link}to="/hajj">HAJJ</Nav.Link>
-//                         <Nav.Link as={Link}to="/tour">TUOR</Nav.Link>
-//                     </Nav>
-//                     </Navbar.Collapse>
-//                 </Container>
-//                 </Navbar> */}
