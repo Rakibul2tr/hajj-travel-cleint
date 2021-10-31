@@ -21,9 +21,10 @@ const PackegDetail = () => {
     })
     
     const onSubmit = data => {
+        console.log(data);
         data.status='pending';
         data.userId=user.uid;
-        fetch(`http://localhost:5000/packeg/${singlid}`,{
+        fetch(`https://shrieking-zombie-85124.herokuapp.com/packeg/${singlid}`,{
 
             method:'POST',
             headers:{

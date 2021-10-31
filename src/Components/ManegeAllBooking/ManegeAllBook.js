@@ -9,7 +9,7 @@ const ManegeAllBook = () => {
 
     //booking packeg manegment
     useEffect(()=>{
-        fetch('http://localhost:5000/manegeall')
+        fetch('https://shrieking-zombie-85124.herokuapp.com/manegeall')
         .then(res=>res.json())
         .then(data=>{
             setbookItems(data);
@@ -19,7 +19,7 @@ const ManegeAllBook = () => {
     const deletebtn=(id)=>{
         const proceed=window.confirm("Are you sure deleted user ?");
         if(proceed){
-            fetch(`http://localhost:5000/manegeall/${id}`,{
+            fetch(`https://shrieking-zombie-85124.herokuapp.com/manegeall/${id}`,{
             method:'DELETE',
             headers:{
                 "Content-Type":"application/json"
@@ -35,17 +35,17 @@ const ManegeAllBook = () => {
         }
     };
     const updatebtn=(id)=>{
-        // fetch(`http://localhost:5000/manegeall/${id}`,{
-        //     method:'PUT',
-        //     headers:{
-        //         'content-type':'application/json'
-        //     },
-        //     body:JSON.stringify(bookItems)
-        // })
-        // .then(res=>res.json())
-        // .then(data=>{
-        //     console.log(data);
-        // })
+        fetch(`https://shrieking-zombie-85124.herokuapp.com/manegeall/${id}`,{
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(bookItems)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
     }
     
     return (

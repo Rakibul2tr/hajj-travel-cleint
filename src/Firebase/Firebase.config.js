@@ -1,11 +1,11 @@
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCG5osVNNrTkr95-rEfbS0ybY6M3w29eLU",
-    authDomain: "voluenteer-5d356.firebaseapp.com",
-    projectId: "voluenteer-5d356",
-    storageBucket: "voluenteer-5d356.appspot.com",
-    messagingSenderId: "413811595198",
-    appId: "1:413811595198:web:a94836907096acdc2c0bef"
-  };
+  apiKey: "AIzaSyDr2vY1hg3dq4EMlDLqOZonmGPArQzWwW0",
+  authDomain: "hajj-umrah-3d5c6.firebaseapp.com",
+  projectId: "hajj-umrah-3d5c6",
+  storageBucket: "hajj-umrah-3d5c6.appspot.com",
+  messagingSenderId: "997971308237",
+  appId: "1:997971308237:web:56996fba2b3bd9686c8384"
+};
 
   export default firebaseConfig;

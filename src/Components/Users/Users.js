@@ -7,7 +7,7 @@ const Users = () => {
     const [userdelete,setuserdelete]=useState([])
 //get users
     useEffect(()=>{
-        fetch("http://localhost:5000/user")
+        fetch("https://shrieking-zombie-85124.herokuapp.com/user")
         .then(res=>res.json())
         .then(data=>{
             setusers(data);
@@ -17,7 +17,7 @@ const Users = () => {
     const deletebtn=(id)=>{
         const proceed=window.confirm("Are you sure deleted user ?");
         if(proceed){
-            fetch(`http://localhost:5000/user/${id}`,{
+            fetch(`https://shrieking-zombie-85124.herokuapp.com/user/${id}`,{
             method:'DELETE',
             headers:{
                 "Content-Type":"application/json"

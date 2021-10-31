@@ -51,7 +51,7 @@ const Usefirebase=()=>{
 
     //all packeg data fethc
     useEffect(()=>{
-      fetch('http://localhost:5000/home')
+      fetch('https://shrieking-zombie-85124.herokuapp.com/home')
       .then(res=>res.json())
       .then(data=>{
         setpackeges(data);
@@ -90,7 +90,7 @@ const Usefirebase=()=>{
     }
     //gleary data get 
     useEffect(()=>{
-        fetch("http://localhost:5000/gleary")
+        fetch("https://shrieking-zombie-85124.herokuapp.com/gleary")
         .then(res=>res.json())
         .then(data=>{
             setgleary(data)
@@ -98,7 +98,7 @@ const Usefirebase=()=>{
     },[]);
     ///update
     const update=(id)=>{
-            fetch(`http://localhost:5000/packeg/${id}`)
+            fetch(`https://shrieking-zombie-85124.herokuapp.com/packeg/${id}`)
             .then(res=>res.json())
             .then(data=>{
                 setsinglepackeg(data)

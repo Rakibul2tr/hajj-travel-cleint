@@ -17,6 +17,7 @@ import Footer from './Shierd/Footer/Footer';
 import Menubar from './Shierd/Header/Menubar';
 import ManegeAllBook from './Components/ManegeAllBooking/ManegeAllBook';
 import Update from './Components/Update/Update';
+import Notfound from './Components/NotFuond/Notfound';
 
 function App() {
   return (
@@ -69,6 +70,9 @@ function App() {
             </Route>
             <Route exact path="/manegeall/:id">
               <Update></Update>
+            </Route>
+            <Route exact path="*">
+              <Notfound></Notfound>
             </Route>
           </Switch>
           <Footer></Footer>
