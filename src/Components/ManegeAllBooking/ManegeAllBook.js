@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ManegeAllBook = () => {
@@ -52,7 +53,7 @@ const ManegeAllBook = () => {
         <div className="container py-5 mb-5">
            <div className="row">
                <ol className='p-0 m-0 ms-auto'>
-                  {
+                  { bookItems==0?<Spinner className="mx-auto" animation="grow" variant="danger" />:
                       bookItems.map(singleitem=><li key={singleitem._id} className='p-0 m-0 w-75 mx-auto text-start'>
                         <span className="border me-2 p-1">{singleitem.title}</span>
                         <span className="border me-2 p-1">{singleitem?.email}</span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Spinner } from 'react-bootstrap';
 
 const Users = () => {
     const [users,setusers]=useState([])
@@ -35,7 +36,7 @@ const Users = () => {
     return (
         <div className="container py-5">
             <div className="row pt-5">
-                {
+                {   users==0?<Spinner className="mx-auto" animation="grow" variant="danger" />:
                     users.map(user=><div key={user._id} className="col-md-8 offset-md-4 mx-auto">
                         <div className="userlist d-flex justify-content-evenly mb-2">
                             <h6>{user.username}</h6>

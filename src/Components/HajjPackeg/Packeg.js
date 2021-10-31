@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UseContex from '../../Contextapi/UseContext';
 
@@ -20,7 +20,8 @@ const Packeg = () => {
             </div>
          <div className="row">
              {
-                 homepackegdata.map(packeg=><div key={packeg._id} className="col-sm-4 g-4">
+             homepackegdata==0?<Spinner className="mx-auto" animation="border" variant="info" />:
+             homepackegdata.map(packeg=><div key={packeg._id} className="col-sm-4 g-4">
                  <div className="card packegcard">
                      <div className="serviceimag">
                          <img className="w-100"height="200px" src={packeg.imgLink} alt="" />

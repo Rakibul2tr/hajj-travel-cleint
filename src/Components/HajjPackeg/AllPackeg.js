@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UseContex from '../../Contextapi/UseContext';
 
@@ -19,7 +19,7 @@ const addtocardhendl=(packeg)=>{
              </Navbar>
             </div>
          <div className="row">
-             {
+             {  packeges==0?<Spinner className="mx-auto" animation="grow" variant="info" />:
                  packeges.map(packeg=><div key={packeg._id} className="col-sm-4 g-4">
                  <div className="card packegcard">
                      <div className="serviceimag">

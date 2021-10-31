@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Spinner } from 'react-bootstrap';
 import UseContex from '../../../Contextapi/UseContext';
 
 const Benner = () => {
@@ -8,7 +8,7 @@ const Benner = () => {
   
     return (
         <div className="slidersec">
-        <Carousel fade>
+         {carouselslic==0?<Spinner animation="grow" variant="dark" />:<Carousel fade>
             {
                 carouselslic.map(slider=><Carousel.Item key={slider._id}>
                         <div className="image">
@@ -26,7 +26,7 @@ const Benner = () => {
                     </Carousel.Item>
                 )
             }
-         </Carousel>
+         </Carousel>}
     </div>
     );
 };
